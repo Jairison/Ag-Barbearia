@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>BarberPro SaaS</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<div id="painelBarbearia" class="painel">
+
+<div class="painel-topo">
+
+<h2>✂ Minha Barbearia</h2>
+
+<button id="fecharPainel">
+
+✖
+
+</button>
+
+</div>
+
+<div class="info">
+
+<h3>BarberPro Premium</h3>
+
+<p>📧 admin@barberpro.com</p>
+
+<p>📞 (85) 99999-9999</p>
+
+<p>📍 Caucaia - CE</p>
+
+</div>
+
+<div class="menu-barbearia">
+
+<button onclick="abrirSecao('barbeiros')">
+👨‍💼 Gerenciar Barbeiros
+</button>
+
+<button onclick="abrirSecao('clientes')">
+👥 Clientes
+</button>
+
+<button onclick="abrirSecao('agendamentos')">
+📅 Agendamentos
+</button>
+
+<button onclick="abrirSecao('relatorios')">
+📊 Relatórios
+</button>
+
+<button onclick="abrirSecao('financeiro')">
+💰 Financeiro
+</button>
+
+<button onclick="abrirSecao('configuracoes')">
+⚙ Configurações
+</button>
+
+</div>
+
+<div class="conteudo-barbearia">
+
+<div id="barbeiros" class="secao">
+<h2>👨‍💼 Gerenciar Barbeiros</h2>
+
+<button id="btnAdicionarBarbeiro">➕ Adicionar Barbeiro</button>
+<button id="btnAdicionarBarbeiro">✖️ Excluir Barbeiro</button>
+
+<ul id="listaBarbeiros">
+</ul>
+
+</div>
+
+<div id="clientes" class="secao">
+
+<h2>👥 Clientes</h2>
+
+<p>Total de clientes cadastrados: 25</p>
+
+</div>
+
+<div id="agendamentos" class="secao">
+
+<h2>📅 Agendamentos</h2>
+
+<p>Visualize todos os agendamentos.</p>
+
+</div>
+
+<div id="relatorios" class="secao">
+
+<h2>📊 Relatórios</h2>
+
+<p>Faturamento, serviços e desempenho.</p>
+
+</div>
+
+<div id="financeiro" class="secao">
+
+<h2>💰 Financeiro</h2>
+
+<p>Entradas, saídas e saldo.</p>
+
+</div>
+
+<div id="configuracoes" class="secao">
+
+<h2>⚙ Configurações</h2>
+
+<p>Configurações da barbearia.</p>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+✂ BarberPro
+
+</div>
+
+<button  id="minhaBarbearia">
+
+Minha Barbearia
+
+</button>
+
+<button id="voltarLogin">
+
+⎋ Sair 
+
+</button>
+
+
+</header>
+
+
+<div class="container">
+
+<section class="card">
+
+<h2>Novo Agendamento</h2>
+
+
+<div class="campo">
+
+<label>Cliente</label>
+
+<input type="text" id="cliente">
+
+</div>
+
+
+<div class="campo">
+
+<label> Barbeiro ✂</label>
+
+<select id="barbeiro">
+
+<option>Henrrique</option>
+
+<option>Carlos</option>
+
+<option>Levy</option>
+
+<option>Jairison</option>
+
+</select>
+
+</div>
+
+
+<div class="campo">
+
+<label>Data</label>
+
+<input type="date" id="data">
+
+</div>
+
+
+<div class="campo">
+
+<label>Horário</label>
+
+<select id="hora">
+
+<option>08:00</option>
+
+<option>09:00</option>
+
+<option>10:00</option>
+
+<option>11:00</option>
+
+<option>13:00</option>
+
+<option>14:00</option>
+
+<option>15:00</option>
+
+<option>16:00</option>
+
+<option>17:00</option>
+
+<option>18:00</option>
+
+<option>19:00</option>
+
+<option>20:00</option>
+
+</select>
+
+<div>
+<div class="campo">
+
+<label>Serviço</label>
+
+<select id="servico">
+
+<option value="">Selecione um serviço</option>
+
+<option>✂ Corte Masculino - R$ 30</option>
+
+<option>🧔 Barba - R$ 20</option>
+
+<option>🔥 Corte + Barba - R$ 45</option>
+
+<option>🎨 Pigmentação - R$ 25</option>
+
+<option>👁️ Sobrancelha - R$ 10</option>
+
+<option>💆 Hidratação Capilar - R$ 35</option>
+
+<option>🎨 Platinado - R$ 120</option>
+
+<option>💆 Progressiva Masculina - R$ 80</option>
+
+</select>
+
+</div>
+
+</div>
+
+<button id="agendar">
+
+Agendar
+
+</button>
+
+</section>
+
+
+<section class="dashboard">
+
+<div class="topo">
+
+<h2>Agendamentos</h2>
+
+<button id="limpar">
+
+Limpar Tudo 🗑️
+
+</button>
+
+</div>
+
+<div id="lista">
+
+</div>
+
+</section>
+
+</div>
+
+<script src="script.js">
+
+</script>
+
+</body>
+
+</html>
